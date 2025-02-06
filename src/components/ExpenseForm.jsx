@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-const ExpenseForm: React.FC<{ onAddExpense: (expense: any) => void }> = ({
-  onAddExpense,
-}) => {
+const ExpenseForm = ({ onAddExpense }) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!title || !amount || !category) return;
     onAddExpense({ id: Date.now(), title, amount: +amount, category });
