@@ -1,5 +1,3 @@
-import React from "react";
-
 const ExpenseList = ({ expenses }) => {
   return (
     <ul className="p-4">
